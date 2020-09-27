@@ -32,18 +32,16 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/,
-                use: [{
-                    loader: MiniCssExtractPlugin.loader,
-                    options: {
-                        hmr: true,
-                        reloadAll: true
-                    }
-                }, 'css-loader']
+                use: ['style-loader', 'css-loader']
             },
             {
                 test: /\.(png|jpg|svg|gif)$/,
                 use: ['file-loader']
             },
+            {
+                test: /\.html$/,
+                use: ['html-loader']
+            }
         ]
     }
 }
