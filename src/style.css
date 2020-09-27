@@ -1,0 +1,136 @@
+/*-----------------
+    BASE STYLES
+-----------------*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, 
+body {
+    width: 100vw;
+    height: 100%;
+}
+
+body {
+    background-color: #212121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shadow {
+    -webkit-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.25);
+    box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.25);
+}
+
+
+/*---------
+    APP
+---------*/
+
+.app {
+    width: 400px;
+    height: 70%;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #814c4c;
+}
+
+.app__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-self: center;
+    flex-direction: column;
+}
+
+.app__header {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.app__header h1 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+.app__main {
+    width: 100%;
+    height: 85%;
+}
+
+.tasks__input {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tasks__input input {
+    width: 90%;
+    padding: 10px;
+    background-color: #212121;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1.5em;
+    color: #814c4c;
+}
+
+.tasks__wrapper {
+    width: 90%;
+    height: 80%;
+    padding: 5%;
+    margin: 0 5%;
+    border-radius: 5px;
+    background-color: #212121;
+}
+
+.tasks__list {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    overflow-y: scroll;
+}
+
+.tasks__list::-webkit-scrollbar {
+    width: 5px;
+}
+
+.tasks__list::-webkit-scrollbar-thumb {
+    background: rgb(107, 107, 107);
+    border-radius: 2px;
+}
+
+.task {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #504646;
+    color: #b18484;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.task_complete {
+    text-decoration: line-through;
+    text-decoration-color: #212121;
+    color: #b18484;
+    opacity: 0.5;
+}
